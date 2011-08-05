@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background: #000;
+	color: #fff;
+	overflow: hidden;
+}
+
+#audio {
+	bottom: 0;
+	display: none;
+	position: absolute;
+	width: 100%;
+}
+
+#container {
+	background: #000;
+	height: 100%;
+	width: 100%;
+}
+
+	#container canvas {
+		background: #000;
+		display: block;
+	}
