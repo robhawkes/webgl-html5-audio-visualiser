@@ -13,7 +13,7 @@
 	
 	<body>
 		<div id="display"></div>
-		<audio id="audio" src="Impromptu in A.ogg" controls></audio>
+		<audio id="audio" src="Impromptu in A.ogg" controls autoplay></audio>
 		
 		<script>
 			// Set up variables
@@ -53,7 +53,7 @@
 				display = document.getElementById("display");
 				
 				// Stop the visualisation
-				stop = true;
+				stop = false;
 				
 				// Set the scene size
 				sceneWidth = window.innerWidth;
@@ -158,9 +158,10 @@
 					
 					// Scale the cube so it is smaller near the poles of the sphere
 					scaleValue = Math.abs(cube.position.y) / 100;
-					cube.scale.x = 1 - (scaleValue * 0.7);
-					cube.scale.y = 1 - (scaleValue * 0.7);
-					cube.scale.z = 1 - (scaleValue * 0.7);
+
+					cube.scale.x = 1 - scaleValue * 0.7;
+					cube.scale.y = 1 - scaleValue * 0.7;
+					cube.scale.z = 1 - scaleValue * 0.7;
 					
 					// Assign scale value to the cube so we can grab it later
 					cube.scaleValue = 1 - (scaleValue * 0.7);
